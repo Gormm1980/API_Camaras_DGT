@@ -3,7 +3,7 @@ from model_utils.models import TimeStampedModel, SoftDeletableModel
 
 
 class TrafficCamera(TimeStampedModel, SoftDeletableModel):
-        title = models.SlugField(blank=True, unique=True)
+        title = models.CharField(max_length=50, blank=True)
         url = models.URLField(blank=True)
         lat = models.IntegerField(blank=True, null=True)
         lon = models.IntegerField(blank=True, null=True)
