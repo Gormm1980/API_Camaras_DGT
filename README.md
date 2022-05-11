@@ -1,4 +1,4 @@
-1. Configura un entorno virtual
+# Configura un entorno virtual
 
 Primero debes configurar el ambiente de trabajo. Primero instala y configura virtualenv, si ya lo tienes instalado ****puedes ejecutar lo siguiente:
 
