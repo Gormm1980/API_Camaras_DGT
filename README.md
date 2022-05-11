@@ -36,7 +36,7 @@ Tendreis que ejecutar el siguiente script en la terminal antes de instalar el re
 - pip freeze > requirements.txt
 
 
-# MUY IMPORTANTE INSTALAR PILLOW PARA TRABAJAR CON IMAGENES
+MUY IMPORTANTE INSTALAR PILLOW PARA TRABAJAR CON IMAGENES
 
 - pip install Pillow
 
