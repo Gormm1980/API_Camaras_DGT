@@ -24,7 +24,8 @@ djangorestframework==3.11.0
 djangorestframework-simplejwt==4.4.0
 django-model-utils==4.0.0
 
-# a continuación ejecutar el siguiente comando para instalar todas las librerías:
+a continuación ejecutar el siguiente comando para instalar todas las librerías:
+
 - pip install -r requirements.txt
 
 # si os da el error: ERROR: Could not open requirements file: [Errno 2] No existe el archivo o el directorio: 'requirements.txt'
@@ -37,13 +38,14 @@ django-model-utils==4.0.0
 
 - pip install Pillow
 
-# El siguiente paso es crear un nuevo proyecto de Django
+ El siguiente paso es crear un nuevo proyecto de Django
+
 - django-admin startproject "nombre del proyecto"
 
-# Podemos asegurarnos que todo funcione hasta aquí. Puedes probar la ejecución del servidor Django con el siguiente comando:
-- python manage.py runserver
+Podemos asegurarnos que todo funcione hasta aquí. Puedes probar la ejecución del servidor Django con el siguiente comando:
 
-3. Crear aplicación
+- python manage.py runserver
+# Crear aplicación
 
 # Instalación y configuración de Django REST Framework
 
