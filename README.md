@@ -28,6 +28,7 @@ djangorestframework-simplejwt==4.4.0
 django-model-utils==4.0.0
 
 a continuación ejecutar el siguiente comando para instalar todas las librerías:
+
 - pip install -r requirements.txt
 
  si os da el error: ERROR: Could not open requirements file: [Errno 2] No existe el archivo o el directorio: 'requirements.txt'
@@ -41,9 +42,12 @@ MUY IMPORTANTE INSTALAR PILLOW PARA TRABAJAR CON IMAGENES
 - pip install Pillow
 
  El siguiente paso es crear un nuevo proyecto de Django
+
+
 - django-admin startproject "nombre del proyecto"
 
 Podemos asegurarnos que todo funcione hasta aquí. Puedes probar la ejecución del servidor Django con el siguiente comando:
+
 - python manage.py runserver
 
 # Crear aplicación
