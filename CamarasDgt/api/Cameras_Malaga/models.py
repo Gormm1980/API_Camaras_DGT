@@ -2,7 +2,7 @@ from django.db import models
 from model_utils.models import TimeStampedModel, SoftDeletableModel
 
 
-class CamerasMadrid(TimeStampedModel, SoftDeletableModel):
+class CamerasMalaga(TimeStampedModel, SoftDeletableModel):
         title = models.CharField(max_length=50, blank=True)
         location = models.CharField(max_length=50, blank=True)
         url = models.URLField(blank=True)

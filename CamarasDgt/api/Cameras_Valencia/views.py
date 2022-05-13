@@ -1,38 +1,38 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import CamerasMadridSerializers
-from .models import CamerasMadrid
+from .serializers import CamerasValenciaSerializers
+from .models import CamerasValencia
 from rest_framework import status
 from django.http import Http404
     
     
-class CamerasMadrid_APIView(APIView):
+class CamerasValencia_APIView(APIView):
     def get(self, request, format=None, *args, **kwargs):
-        camera = CamerasMadrid.objects.all()
-        serializer = CamerasMadridSerializers(camera, many=True)
+        camera = CamerasValencia.objects.all()
+        serializer = CamerasValenciaSerializers(camera, many=True)
         return Response(serializer.data)
     
     def post(self, request, format=None):
-        serializer = CamerasMadridSerializers(data=request.data)
+        serializer = CamerasValenciaSerializers(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class CamerasMadrid_APIView_Detail(APIView):
+class CamerasValencia_APIView_Detail(APIView):
     def get_object(self, pk):
         try:
-            return CamerasMadrid.objects.get(pk=pk)
-        except CamerasMadrid.DoesNotExist:
+            return CamerasValencia.objects.get(pk=pk)
+        except CamerasValencia.DoesNotExist:
             raise Http404
     def get(self, request, pk, format=None):
         camera = self.get_object(pk)
-        serializer = CamerasMadridSerializers(camera)  
+        serializer = CamerasValenciaSerializers(camera)  
         return Response(serializer.data)
     def put(self, request, pk, format=None):
         camera= self.get_object(pk)
-        serializer = CamerasMadridSerializers(camera, data=request.data)
+        serializer = CamerasValenciaSerializers(camera, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)

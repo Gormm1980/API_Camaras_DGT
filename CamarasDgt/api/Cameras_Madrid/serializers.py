@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import CamerasComMadrid
+from .models import CamerasMadrid
 
 
 
-class   CamerasComMadridSerializers(serializers.ModelSerializer):
+class   CamerasMadridSerializers(serializers.ModelSerializer):
     class Meta:
-        model = CamerasComMadrid
+        model = CamerasMadrid
         include_fields = ('id', 'name', 'url', 'location')
 
