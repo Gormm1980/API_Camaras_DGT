@@ -6,7 +6,6 @@ from .models import CamerasComMadrid
 from rest_framework import status
 from django.http import Http404
     
-  
     
 class CamerasComMadrid_APIView(APIView):
     def get(self, request, format=None, *args, **kwargs):
