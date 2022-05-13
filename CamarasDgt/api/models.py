@@ -2,8 +2,9 @@ from django.db import models
 from model_utils.models import TimeStampedModel, SoftDeletableModel
 
 
-class TrafficCamera(TimeStampedModel, SoftDeletableModel):
+class CamerasCAM(TimeStampedModel, SoftDeletableModel):
         title = models.CharField(max_length=50, blank=True)
+        location = models.CharField(max_length=50, blank=True)
         url = models.URLField(blank=True)
         lat = models.FloatField(blank=True, null=True)
         lon = models.FloatField(blank=True, null=True)
@@ -16,17 +17,6 @@ class TrafficCamera(TimeStampedModel, SoftDeletableModel):
             return self.title
 
         
-class Location(models.Model):
-        name = models.CharField(max_length=255, db_index=True)
-        traffic_cameras = models.ForeignKey(TrafficCamera, on_delete=models.CASCADE)
-        
-        
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args,**kwargs, ) 
-            return None
-        
-        def __str__(self):
-            return self.name
 
 
 

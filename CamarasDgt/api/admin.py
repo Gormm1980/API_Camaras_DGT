@@ -1,6 +1,4 @@
 from django.contrib import admin
-from .models import Location, TrafficCamera
+from .models import  CamerasCAM
 
-
-admin.site.register(Location)
-admin.site.register(TrafficCamera)
+admin.site.register(CamerasCAM)

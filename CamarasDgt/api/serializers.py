@@ -1,15 +1,12 @@
 from rest_framework import serializers
-from .models import TrafficCamera, Location
+from .models import CamerasCAM
 
 
 
-class LocationSerializers(serializers.ModelSerializer):
-    class Meta:
-        model = Location
-        include_fields = ('id', 'name', 'traffic_cameras')
+
         
-class TrafficCameraSerializers(serializers.ModelSerializer):
+class   CamerasCAMSerializers(serializers.ModelSerializer):
     class Meta:
-        model = TrafficCamera
-        include_fields = ('id', 'name', 'url')
+        model = CamerasCAM
+        include_fields = ('id', 'name', 'url', 'location')
        
