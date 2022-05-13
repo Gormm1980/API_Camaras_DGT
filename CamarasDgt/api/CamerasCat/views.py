@@ -1,39 +1,39 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import CamerasCAMSerializers
-from .models import CamerasCAM
+from .serializers import CamerasCatSerializers
+from .models import CamerasCat
 from rest_framework import status
 from django.http import Http404
     
   
     
-class CamerasCAM_APIView(APIView):
+class CamerasCat_APIView(APIView):
     def get(self, request, format=None, *args, **kwargs):
-        camera = CamerasCAM.objects.all()
-        serializer = CamerasCAMSerializers(camera, many=True)
+        camera = CamerasCat.objects.all()
+        serializer = CamerasCatSerializers(camera, many=True)
         return Response(serializer.data)
     
     def post(self, request, format=None):
-        serializer = CameraCAMSerializers(data=request.data)
+        serializer = CamerasCatSerializers(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class CamerasCAM_APIView_Detail(APIView):
+class CamerasCat_APIView_Detail(APIView):
     def get_object(self, pk):
         try:
-            return CamerasCAM.objects.get(pk=pk)
-        except CamerasCAM.DoesNotExist:
+            return CamerasCat.objects.get(pk=pk)
+        except CamerasCat.DoesNotExist:
             raise Http404
     def get(self, request, pk, format=None):
         camera = self.get_object(pk)
-        serializer = CamerasCAMSerializers(camera)  
+        serializer = CamerasCatSerializers(camera)  
         return Response(serializer.data)
     def put(self, request, pk, format=None):
         camera= self.get_object(pk)
-        serializer = CamerasCAMSerializers(camera, data=request.data)
+        serializer = CamerasCatSerializers(camera, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -42,3 +42,4 @@ class CamerasCAM_APIView_Detail(APIView):
         camera = self.get_object(pk)
         camera.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+

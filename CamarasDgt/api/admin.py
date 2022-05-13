@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import  CamerasCAM
+from CamerasMadrid.models import  CamerasComMadrid
+from CamerasCat.models import  CamerasCat
 
-admin.site.register(CamerasCAM)
+admin.site.register(CamerasComMadrid)
+admin.site.register(CamerasCat)

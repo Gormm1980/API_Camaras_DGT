@@ -1,8 +1,7 @@
 from django.db import models
 from model_utils.models import TimeStampedModel, SoftDeletableModel
-
-
-class CamerasCAM(TimeStampedModel, SoftDeletableModel):
+        
+class CamerasCat(TimeStampedModel, SoftDeletableModel):
         title = models.CharField(max_length=50, blank=True)
         location = models.CharField(max_length=50, blank=True)
         url = models.URLField(blank=True)
@@ -15,9 +14,6 @@ class CamerasCAM(TimeStampedModel, SoftDeletableModel):
      
         def __str__(self):
             return self.title
-
-        
-
 
 
 
