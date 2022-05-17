@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'CamarasDgt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Camaras_trafico_dgt',
+        'NAME': 'camarasdgt',
         'USER': 'postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost',
