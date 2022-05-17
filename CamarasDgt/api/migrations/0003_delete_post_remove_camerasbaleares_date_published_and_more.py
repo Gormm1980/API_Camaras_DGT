@@ -10,9 +10,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.DeleteModel(
-            name='Post',
-        ),
+ 
         migrations.RemoveField(
             model_name='camerasbaleares',
             name='date_published',
