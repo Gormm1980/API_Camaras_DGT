@@ -1,8 +1,8 @@
 from django.db import models
-from model_utils.models import TimeStampedModel, SoftDeletableModel
 
 
-class CamerasComMadrid(TimeStampedModel, SoftDeletableModel):
+
+class CamerasComMadrid(models.Model):
         title = models.CharField(max_length=50, blank=True)
         location = models.CharField(max_length=50, blank=True)
         url = models.URLField(blank=True)

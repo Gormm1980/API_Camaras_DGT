@@ -1,7 +1,7 @@
 from django.db import models
-from model_utils.models import TimeStampedModel, SoftDeletableModel
+
         
-class CamerasCat(TimeStampedModel, SoftDeletableModel):
+class CamerasCat(models.Model):
         title = models.CharField(max_length=50, blank=True)
         location = models.CharField(max_length=50, blank=True)
         url = models.URLField(blank=True)
